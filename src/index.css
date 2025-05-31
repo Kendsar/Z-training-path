@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full antialiased;
+  }
+  
+  body {
+    @apply h-full text-zinc-900 dark:text-zinc-100;
+  }
+  
+  #root {
+    @apply h-full;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-700;
+  }
+  
+  .btn-outline {
+    @apply border border-zinc-300 text-zinc-900 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800;
+  }
+  
+  .btn-ghost {
+    @apply text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800;
+  }
+  
+  .btn-sm {
+    @apply h-8 px-3 rounded-md;
+  }
+  
+  .btn-md {
+    @apply h-10 px-4 py-2 rounded-md;
+  }
+  
+  .btn-lg {
+    @apply h-12 px-6 py-3 rounded-md text-base;
+  }
+  
+  .input {
+    @apply flex h-10 w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-50 dark:placeholder:text-zinc-400 dark:focus-visible:ring-primary-500;
+  }
+  
+  .textarea {
+    @apply flex min-h-[80px] w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-50 dark:placeholder:text-zinc-400;
+  }
+  
+  .badge {
+    @apply inline-flex items-center rounded-full border border-zinc-200 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:border-zinc-800;
+  }
+  
+  .badge-primary {
+    @apply border-transparent bg-primary-500 text-white hover:bg-primary-600;
+  }
+  
+  .badge-secondary {
+    @apply border-transparent bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-600;
+  }
+  
+  .badge-outline {
+    @apply text-zinc-900 dark:text-zinc-50;
+  }
+  
+  .card {
+    @apply rounded-lg border border-zinc-200 bg-white text-zinc-950 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2;
+  }
+
+  .calendar-day {
+    @apply aspect-square flex flex-col items-center justify-between p-1 rounded-md text-sm transition-colors relative;
+  }
+  
+  .calendar-day-current-month {
+    @apply bg-white hover:bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-700;
+  }
+  
+  .calendar-day-other-month {
+    @apply text-zinc-400 dark:text-zinc-600;
+  }
+  
+  .calendar-day-today {
+    @apply bg-primary-100 text-primary-700 font-bold dark:bg-primary-900 dark:text-primary-300;
+  }
+  
+  .calendar-day-with-workout {
+    @apply relative;
+  }
+  
+  .calendar-workout-badge {
+    @apply absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] px-1.5 py-0.5 rounded-full bg-primary-500 text-white whitespace-nowrap overflow-hidden text-ellipsis max-w-[calc(100%-4px)];
+  }
+  
+  .rank-badge {
+    @apply relative inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+  }
+}
+
+.hover-float:hover {
+  @apply animate-float;
+}
+
+.kai-glow {
+  @apply shadow-kai;
+}
